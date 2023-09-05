@@ -1,4 +1,491 @@
-<html>
-First commit
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta name="google-site-verification" content="ftFOlJETX-2KNjaPh8W6s8lhigItRuu9fOmjHZZ0nY0" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Towards More Controllable End-to-End Emotional Speech Synthesis via Explicit Speech Intensity and Pitch Modeling</title>
+  </head>
+  <style type="text/css">
+    table {
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    audio {
+      width: 100%;
+    }
+
+    thead>tr>th:first-child {
+      width: 96px;
+    }
+
+    @media (max-width: 767px) {
+      .big-screen {
+        display: none;
+      }
+    }
+
+    @media (min-width: 767px) {
+      .small-screen {
+        display: none;
+      }
+    }
+    td {
+      text-align: center;
+    }
+  </style>
+
+  <body>
+    <header class="header">
+      <div class="jumbotron bg-info text-center">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-12">
+              <h1><a class="text-light">Towards More Controllable End-to-End Emotional Speech Synthesis via Explicit Speech Intensity and Pitch Modeling</h1><br>
+              <font size=5><span style="color:#FFFFFF"> Kwan-Yeung Wong, Fu-Lai Chung<br>
+             <font size=3><span style="color:#dbdbdb"> kwan-yeung-pgr.wong@connect.polyu.hk &nbsp korris.chung@polyu.edu.hk
+             </font><font size=4> <br> <br>  Department of Computing, The Hong Kong Polytechnic University </a>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row" id="result">
+        <div class="col-md-12">                
+                  <div class="big-screen">
+                    <br /><br />
+                     <h2>----------------------------->   Audio Samples  <---------------------------</h2>
+
+                     <br /><br />
+                    <!--  Speech Quality Evaluation -->
+                    <table class="table">
+                        <thead>
+        
+                            <tr>
+                                <th colspan=7><h4>Baseline Comparision</h4></th>
+                            </tr>
+                        </thead>
+                        <h6> <b>Prosody-Tacotron [1]</b>: A state-of-the-art extension to Tacotron that synthesizes speech to match the prosody of referenace audio. </h6>
+                        <h6><b>VITS (Emotion Label) </b>: VITS with additional emotion label embedding for global conditioning </h6>
+                        <h6><b>VITS (Spectrogram) </b>: VITS with addition spectrogram embedding for global conditioning  </h6>
+                        <h6><b>IP-VITS (proposed) </b>: The proposed end-to-end speech synthesis architecture that synthesizes emotional speech by explicit conditioning on the intensity and pitch of reference audio </h6>
+
+                        <tbody>
+                                
+                                
+                                <tr>
+                                    <th></th>
+                                    <th style="text-align:center;">   Sentence</th>
+                                    <th style="text-align:center;">   Groundtruth</th>
+                                    <th style="text-align:center;">   Prosody-Tacotron</th>
+                                    <th style="text-align:center;">   VITS (Emotion Label)</th>
+                                    <th style="text-align:center;">   VITS (Spectrogram)</th>
+                                    <th style="text-align:center;">   IP-VITS (Ours)</th>                         
+                                </tr>
+                                <!-- single sentence -->
+
+                                <tr>
+                                  <th scope="row">    </th>
+                                  <td>
+                                    That was his chief thought.
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/groundtruth/5.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/prosody-tacotron/5.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-eid/5.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/ours/5.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">    </th>
+                                  <td>
+                                    At the end of four.
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/groundtruth/6.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/prosody-tacotron/6.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-eid/6.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                        <source src="" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/ours/6.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <th scope="row">    </th>
+                                  <td>
+                                    The nine the eggs, I keep.
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/groundtruth/7.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/prosody-tacotron/7.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                        <source src="./sec1/vits-eid/7.wav" type="audio/wav" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>  
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/ours/7.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                </tr>
+
+                        </tbody>
+
+                        <thead>
+        
+                            <tr>
+                                <th colspan=5><h4>Intensity and Pitch Control</h4></th>
+                            </tr>
+                        </thead>
+                        
+                       <tbody>
+                                
+                                
+                            <tr>
+                                <th></th>
+                                <th style="text-align:center;">   Sentence</th>
+                                <th style="text-align:center;">   Speaker</th>
+                                <th style="text-align:center;">   Intensity Reference</th>
+                                <th style="text-align:center;">   Pitch Reference</th>
+                                <th style="text-align:center;">   Result</th>                         
+                            </tr>
+
+                            <tr>
+                            <th scope="row">    </th>
+                            <td>
+                                She was born on april nineteen forty three.
+                            </td>
+                            <td>
+                              Speaker 18
+                            </td>
+                            <td>
+                                (Sad)
+                                <audio controls>
+                                <source src="./sec2/1-sad.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                                </audio>
+                            </td>
+                            <td>
+                                (Surprised)
+                                <audio controls>
+                                <source src="./sec2/1-surprised.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                                </audio>
+                            </td>
+                            <td>
+                                <audio controls>
+                                <source src="./sec2/1-sad+surprised.wav" type="audio/wav" />
+                                Your browser does not support the audio element.
+                                </audio>
+                            </td>
+                            </tr>
+
+
+
+                            <tr>
+                              <th scope="row">    </th>
+                              <td>
+                                Said the American to Chinese?
+                              </td>
+                              <td>
+                                Speaker 18
+                              </td>
+                              <td>
+                                  (Neutral)
+                                  <audio controls>
+                                  <source src="./sec2/2-neutral.wav" type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                  </audio>
+                              </td>
+                              <td>
+                                  (Surprise)
+                                  <audio controls>
+                                  <source src="./sec2/2-surprised.wav" type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                  </audio>
+                              </td>
+                              <td>
+                                  <audio controls>
+                                  <source src="./sec2/2-neutral+surprised.wav" type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                  </audio>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">    </th>
+                              <td>
+                                Said the American to Chinese?
+                              </td>
+                              <td>
+                                Speaker 18
+                              </td>
+                              <td>
+                                  (Happy)
+                                  <audio controls>
+                                  <source src="./sec2/3-happy.wav" type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                  </audio>
+                              </td>
+                              <td>
+                                  (Surprise)
+                                  <audio controls>
+                                  <source src="./sec2/3-surprised.wav" type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                  </audio>
+                              </td>
+                              <td>
+                                  <audio controls>
+                                  <source src="./sec2/3-happy+surprised.wav" type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                  </audio>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">    </th>
+                              <td>
+                                Said the American to Chinese?
+                              </td>
+                              <td>
+                                Speaker 12
+                              </td>
+                              <td>
+                                  (Happy)
+                                  <audio controls>
+                                  <source src="./sec2/4-happy.wav" type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                  </audio>
+                              </td>
+                              <td>
+                                  (Surprise)
+                                  <audio controls>
+                                  <source src="./sec2/4-surprised.wav" type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                  </audio>
+                              </td>
+                              <td>
+                                  <audio controls>
+                                  <source src="./sec2/4-happy+surprised.wav" type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                  </audio>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">    </th>
+                              <td>
+                                No, I burst the balloon!
+                              </td>
+                              <td>
+                                Speaker 19
+                              </td>
+                              <td>
+                                  (Angry)
+                                  <audio controls>
+                                  <source src="./sec2/5-angry1.wav" type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                  </audio>
+                              </td>
+                              <td>
+                                  (Angry)
+                                  <audio controls>
+                                  <source src="./sec2/5-angry2.wav" type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                  </audio>
+                              </td>
+                              <td>
+                                  <audio controls>
+                                  <source src="./sec2/5-angry+angry.wav" type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                  </audio>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">    </th>
+                              <td>
+                                No, I burst the balloon!
+                              </td>
+                              <td>
+                                Speaker 19
+                              </td>
+                              <td>
+                                  (Angry)
+                                  <audio controls>
+                                  <source src="./sec2/6-angry.wav" type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                  </audio>
+                              </td>
+                              <td>
+                                  (Surprise)
+                                  <audio controls>
+                                  <source src="./sec2/6-surprised.wav" type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                  </audio>
+                              </td>
+                              <td>
+                                  <audio controls>
+                                  <source src="./sec2/6-angry+surprised.wav" type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                  </audio>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <th scope="row">    </th>
+                              <td>
+                                No, I burst the balloon!
+                              </td>
+                              <td>
+                                Speaker 19
+                              </td>
+                              <td>
+                                  (Angry)
+                                  <audio controls>
+                                  <source src="./sec2/7-angry.wav" type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                  </audio>
+                              </td>
+                              <td>
+                                  (Sad)
+                                  <audio controls>
+                                  <source src="./sec2/7-sad.wav" type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                  </audio>
+                              </td>
+                              <td>
+                                  <audio controls>
+                                  <source src="./sec2/7-angry+sad.wav" type="audio/wav" />
+                                  Your browser does not support the audio element.
+                                  </audio>
+                              </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                    [1]Skerry-Ryan, R., “Towards End-to-End Prosody Transfer for Expressive Speech Synthesis with Tacotron”, <i>arXiv e-prints</i>, 2018. doi:10.48550/arXiv.1803.09047.
+
+
+
+                  </div>
+                 
+        </div>
+      </div>
+      <hr>
+      <div class="row" id="ref">
+        <div class="col">
+          <!--<h2>References</h2>
+          
+         -->
+        </div>
+      </div>
+      <hr>
+      <!-- <div class="row" id="contact">
+          <div class="col">
+            <h2>Contact</h2>
+            <div></div>
+          </div>
+        </div> -->
+    </div>
+  </main>
+  <footer class="bg-secondary text-light mt-4 pt-3 pb-2 ">
+    <div class="container">
+      <p class="text-center">
+        
+      </p>
+    </div>
+  </footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
 
 </html>
