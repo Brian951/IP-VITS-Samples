@@ -70,148 +70,614 @@
                     <table class="table">
                         <thead>
         
-                            <tr>
+                            <tr align="center">
                                 <th colspan=7><h4>Baseline Comparision</h4></th>
                             </tr>
                         </thead>
                         <h6> <b>Prosody-Tacotron [1]</b>: A state-of-the-art extension to Tacotron that synthesizes speech to match the prosody of referenace audio. </h6>
-                        <h6><b>VITS (Emotion Label) </b>: VITS with additional emotion label embedding for global conditioning </h6>
-                        <h6><b>VITS (Spectrogram) </b>: VITS with addition spectrogram embedding for global conditioning  </h6>
+                        <h6><b>VITS-EL</b>: VITS with additional emotion label embedding for global conditioning </h6>
+                        <h6><b>VITS-Spec</b>: VITS with addition spectrogram embedding for global conditioning  </h6>
                         <h6><b>IP-VITS (proposed) </b>: The proposed end-to-end speech synthesis architecture that synthesizes emotional speech by explicit conditioning on the intensity and pitch of reference audio </h6>
 
                         <tbody>
                                 
                                 
                                 <tr>
-                                    <th></th>
                                     <th style="text-align:center;">   Sentence</th>
+                                    <th style="text-align:center;">   Speaker</th>
                                     <th style="text-align:center;">   Groundtruth</th>
                                     <th style="text-align:center;">   Prosody-Tacotron</th>
-                                    <th style="text-align:center;">   VITS (Emotion Label)</th>
-                                    <th style="text-align:center;">   VITS (Spectrogram)</th>
+                                    <th style="text-align:center;">   VITS-EL</th>
+                                    <th style="text-align:center;">   VITS-Spec</th>
                                     <th style="text-align:center;">   IP-VITS (Ours)</th>                         
                                 </tr>
                                 <!-- single sentence -->
 
                                 <tr>
-                                  <th scope="row">    </th>
                                   <td>
-                                    That was his chief thought.
+                                    I can smell the breath of an English.
+                                  </td>
+                                  <td>
+                                   Speaker 11
                                   </td>
                                   <td>
                                     <audio controls>
-                                      <source src="./sec1/groundtruth/5.wav" type="audio/wav" />
+                                      <source src="./sec1/groundtruth/0011_000133.wav" type="audio/wav" />
                                       Your browser does not support the audio element.
                                     </audio>
                                 
                                   </td>
                                   <td>
                                     <audio controls>
-                                      <source src="./sec1/prosody-tacotron/5.wav" type="audio/wav" />
+                                      <source src="./sec1/prosody-tacotron/0011_000133.wav" type="audio/wav" />
                                       Your browser does not support the audio element.
                                     </audio>
                                   </td>
                                   <td>
                                     <audio controls>
-                                      <source src="./sec1/vits-eid/5.wav" type="audio/wav" />
+                                      <source src="./sec1/vits-el/0011_000133.wav" type="audio/wav" />
                                       Your browser does not support the audio element.
                                     </audio>
                                   </td>
                                   <td>
                                     <audio controls>
-                                      <source src="" type="audio/wav" />
+                                      <source src="./sec1/vits-spec/0011_000133.wav" type="audio/wav" />
                                       Your browser does not support the audio element.
                                     </audio>
                                   </td>
                                   <td>
                                     <audio controls>
-                                      <source src="./sec1/ours/5.wav" type="audio/wav" />
-                                      Your browser does not support the audio element.
-                                    </audio>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">    </th>
-                                  <td>
-                                    At the end of four.
-                                  </td>
-                                  <td>
-                                    <audio controls>
-                                      <source src="./sec1/groundtruth/6.wav" type="audio/wav" />
-                                      Your browser does not support the audio element.
-                                    </audio>
-                                
-                                  </td>
-                                  <td>
-                                    <audio controls>
-                                      <source src="./sec1/prosody-tacotron/6.wav" type="audio/wav" />
-                                      Your browser does not support the audio element.
-                                    </audio>
-                                  </td>
-                                  <td>
-                                    <audio controls>
-                                      <source src="./sec1/vits-eid/6.wav" type="audio/wav" />
-                                      Your browser does not support the audio element.
-                                    </audio>
-                                  </td>
-                                  <td>
-                                    <audio controls>
-                                        <source src="" type="audio/wav" />
-                                        Your browser does not support the audio element.
-                                    </audio>
-                                  </td>
-                                  <td>
-                                    <audio controls>
-                                      <source src="./sec1/ours/6.wav" type="audio/wav" />
+                                      <source src="./sec1/ours/0011_000133.wav" type="audio/wav" />
                                       Your browser does not support the audio element.
                                     </audio>
                                   </td>
                                 </tr>
 
                                 <tr>
-                                  <th scope="row">    </th>
                                   <td>
-                                    The nine the eggs, I keep.
+                                    Said the American to Chinese.
+                                  </td>
+                                  <td>
+                                   Speaker 11
                                   </td>
                                   <td>
                                     <audio controls>
-                                      <source src="./sec1/groundtruth/7.wav" type="audio/wav" />
+                                      <source src="./sec1/groundtruth/0011_001451.wav" type="audio/wav" />
                                       Your browser does not support the audio element.
                                     </audio>
                                 
                                   </td>
                                   <td>
                                     <audio controls>
-                                      <source src="./sec1/prosody-tacotron/7.wav" type="audio/wav" />
+                                      <source src="./sec1/prosody-tacotron/0011_001451.wav" type="audio/wav" />
                                       Your browser does not support the audio element.
                                     </audio>
                                   </td>
                                   <td>
                                     <audio controls>
-                                        <source src="./sec1/vits-eid/7.wav" type="audio/wav" />
-                                        Your browser does not support the audio element.
+                                      <source src="./sec1/vits-el/0011_001451.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
                                     </audio>
                                   </td>
                                   <td>
                                     <audio controls>
-                                      <source src="" type="audio/wav" />
+                                      <source src="./sec1/vits-spec/0011_001451.wav" type="audio/wav" />
                                       Your browser does not support the audio element.
                                     </audio>
-                                  </td>  
+                                  </td>
                                   <td>
                                     <audio controls>
-                                      <source src="./sec1/ours/7.wav" type="audio/wav" />
+                                      <source src="./sec1/ours/0011_001451.wav" type="audio/wav" />
                                       Your browser does not support the audio element.
                                     </audio>
                                   </td>
                                 </tr>
+
+
+
+                                <tr>
+                                  <td>
+                                    And what does it mean?
+                                  </td>
+                                  <td>
+                                   Speaker 12
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/groundtruth/0012_001043.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/prosody-tacotron/0012_001043.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-el/0012_001043.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-spec/0012_001043.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/ours/0012_001043.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                </tr>
+
+                                
+
+                                <tr>
+                                  <td>
+                                    When such wanderers meet.
+                                  </td>
+                                  <td>
+                                   Speaker 13
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/groundtruth/0013_000189.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/prosody-tacotron/0013_000189.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-el/0013_000189.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-spec/0013_000189.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/ours/0013_000189.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                </tr>
+
+
+                                <tr>
+                                  <td>
+                                    On the twenty second of last march.
+                                  </td>
+                                  <td>
+                                   Speaker 14
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/groundtruth/0014_000009.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/prosody-tacotron/0014_000009.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-el/0014_000009.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-spec/0014_000009.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/ours/0014_000009.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                </tr>
+
+
+                                <tr>
+                                  <td>
+                                    I lent george three pounds.
+                                  </td>
+                                  <td>
+                                   Speaker 15
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/groundtruth/0015_000862.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/prosody-tacotron/0015_000862.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-el/0015_000862.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-spec/0015_000862.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/ours/0015_000862.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                </tr>
+
+
+                                <tr>
+                                  <td>
+                                    How are you, dear child?
+                                  </td>
+                                  <td>
+                                   Speaker 15
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/groundtruth/0015_001122.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/prosody-tacotron/0015_001122.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-el/0015_001122.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-spec/0015_001122.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/ours/0015_001122.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                </tr>
+
+
+                                <tr>
+                                  <td>
+                                    Enough,you a foolish chatter.
+                                  </td>
+                                  <td>
+                                   Speaker 16
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/groundtruth/0016_001391.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/prosody-tacotron/0016_001391.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-el/0016_001391.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-spec/0016_001391.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/ours/0016_001391.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                </tr>
+
+
+                                <tr>
+                                  <td>
+                                    And be with you,Tom!
+                                  </td>
+                                  <td>
+                                   Speaker 17
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/groundtruth/0017_001039.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/prosody-tacotron/0017_001039.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-el/0017_001039.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-spec/0017_001039.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/ours/0017_001039.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td>
+                                    That was his chief thought.
+                                  </td>
+                                  <td>
+                                   Speaker 18
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/groundtruth/0018_000708.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/prosody-tacotron/0018_000708.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-el/0018_000708.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-spec/0018_000708.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/ours/0018_000708.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                </tr>
+
+
+                                <tr>
+                                  <td>
+                                    At the end of four.
+                                  </td>
+                                  <td>
+                                   Speaker 18
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/groundtruth/0018_000369.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/prosody-tacotron/0018_000369.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-el/0018_000369.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-spec/0018_000369.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/ours/0018_000369.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                </tr>
+
+
+                                <tr>
+                                  <td>
+                                    The nine the eggs, I keep.
+                                  </td>
+                                  <td>
+                                   Speaker 18
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/groundtruth/0018_001401.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/prosody-tacotron/0018_001401.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-el/0018_001401.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-spec/0018_001401.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/ours/0018_001401.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                </tr>
+
+
+                                <tr>
+                                  <td>
+                                    They were going fast, with a light clip.
+                                  </td>
+                                  <td>
+                                   Speaker 19
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/groundtruth/0019_001565.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/prosody-tacotron/0019_001565.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-el/0019_001565.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-spec/0019_001565.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/ours/0019_001565.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                </tr>
+
+
+                                <tr>
+                                  <td>
+                                    Name of the song is called haddocks.
+                                  </td>
+                                  <td>
+                                   Speaker 20
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/groundtruth/0020_000668.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/prosody-tacotron/0020_000668.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-el/0020_000668.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/vits-spec/0020_000668.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                  <td>
+                                    <audio controls>
+                                      <source src="./sec1/ours/0020_000668.wav" type="audio/wav" />
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </td>
+                                </tr>
+
+
+
+
+
+                                
 
                         </tbody>
 
                         <thead>
         
-                            <tr>
-                                <th colspan=5><h4>Intensity and Pitch Control</h4></th>
+                            <tr align="center">
+                                <th colspan=7><h4>Intensity and Pitch Control</h4></th>
                             </tr>
                         </thead>
                         
@@ -224,7 +690,9 @@
                                 <th style="text-align:center;">   Speaker</th>
                                 <th style="text-align:center;">   Intensity Reference</th>
                                 <th style="text-align:center;">   Pitch Reference</th>
-                                <th style="text-align:center;">   Result</th>                         
+                                <th style="text-align:center;">   Result</th>     
+                                <th></th>
+
                             </tr>
 
                             <tr>
@@ -255,6 +723,8 @@
                                 Your browser does not support the audio element.
                                 </audio>
                             </td>
+                            <th></th>
+
                             </tr>
 
 
@@ -287,6 +757,9 @@
                                   Your browser does not support the audio element.
                                   </audio>
                               </td>
+                              
+                              <th></th>
+
                             </tr>
 
                             <tr>
@@ -317,6 +790,8 @@
                                   Your browser does not support the audio element.
                                   </audio>
                               </td>
+                              <th></th>
+
                             </tr>
 
                             <tr>
@@ -347,6 +822,8 @@
                                   Your browser does not support the audio element.
                                   </audio>
                               </td>
+                              <th></th>
+
                             </tr>
 
                             <tr>
@@ -377,6 +854,8 @@
                                   Your browser does not support the audio element.
                                   </audio>
                               </td>
+                              <th></th>
+
                             </tr>
 
                             <tr>
@@ -407,6 +886,8 @@
                                   Your browser does not support the audio element.
                                   </audio>
                               </td>
+                              <th></th>
+
                             </tr>
 
                             <tr>
@@ -437,7 +918,10 @@
                                   Your browser does not support the audio element.
                                   </audio>
                               </td>
+                              <th></th>
+
                             </tr>
+
 
                         </tbody>
 
